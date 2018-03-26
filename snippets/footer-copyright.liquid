@@ -1,0 +1,16 @@
+{%- comment -%}
+(c) Tonytemplates Ltd,
+https://www.tonytemplates.com/
+support@tonytemplates.com
+{%- endcomment -%}
+{% if section.settings.show_copyright %}
+	<div>
+		<span class="tt-footer__copyright">{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}
+		{% if section.settings.show_shopify %}
+			{{ powered_by_link }}
+		{% endif %}
+		{% if section.settings.show_theme %}
+			<a target="_blank" href="https://themeforest.net/item/mogo-fashion-electronics-clothing-and-apparel-shopify-theme/21153459?ref=themetony">Design by MOGO</a></span>
+		{% endif %}
+	</div>
+{% endif %}

@@ -1,0 +1,96 @@
+#theme .tt-header--transparent .tt-header__tape {
+  background: #000000 !important; }
+
+#theme .tt-header--style-01 li a {
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.tt-header__tape-text.hours {
+  font-weight: bold !important;
+  color: #ff9c00 !important; }
+
+.tt-footer__newsletter {
+  max-width: 432px;
+  margin: 0 auto; }
+
+#shopify-section-1521912536179 .row {
+  max-width: 1200px;
+  font-size: .85em; }
+
+#theme .mfp-bg {
+  opacity: 0.65 !important; }
+
+.tt-product__view-overlay .tt-product__hover::before {
+  opacity: 0.25 !important;
+  background-color: #0079b8 !important; }
+
+#theme .tt-qv {
+  background: #ffffff !important;
+  color: #333333 !important; }
+
+.tt-carousel-brands .slick-track {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex: 0 0 auto;
+  margin: 0 auto; }
+
+.tt-sr__text div, .tt-sr__text span {
+  font-size: 45px; }
+
+.tt-header__content .tt-header__logo img {
+  -webkit-transition: width .5s;
+  /* Safari */
+  transition: width .5s; }
+
+.tt-header__content.tt-header__sticky .tt-header__logo img {
+  width: 100px !important; }
+
+.tt-shp-info__strong {
+  font-family: 'Montserrat', sans-serif; }
+
+.tt-product__view-overlay .tt-product__hover::before {
+  background: #fff !important;
+  border: 1px solid #999;
+  opacity: 0.5 !important; }
+
+p,
+.tt-header__menu,
+.tp-revslider-mainul {
+  font-family: 'Muli', sans-serif; }
+
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 167px; }
+  #theme .tt-header--transparent,
+  .tt-header__content,
+  #theme .tt-header--transparent .tt-header__sticky {
+    background: #0076ba !important; }
+  .tt-header.tt-header--transparent {
+    height: auto; }
+  .tt-sr__text div, .tt-sr__text span {
+    font-size: 18px; } }
+
+/* blog post grid */
+@media only screen and (min-width: 768px) {
+  .tt-post-grid__content {
+    padding: 20px; }
+  .tt-post-grid__title {
+    font-size: 18px;
+    line-height: 1.27; } }
+
+/* homepage feature products */
+#theme #shopify-section-1521916608690 {
+  background: #e4e4e4; }
+  #theme #shopify-section-1521916608690 .tt-product,
+  #theme #shopify-section-1521916608690 .tt-product__view-sheet .tt-product__hover,
+  #theme #shopify-section-1521916608690 .tt-product-view [class^='col-'] {
+    background: none !important; }
+  #theme #shopify-section-1521916608690 .tt-page__title a:link {
+    color: inherit; }
+  #theme #shopify-section-1521916608690 .tt-product__image {
+    border: 1px solid #e4e4e4; }
+
+/* home carousel blog */
+.tt-home__carousel-blog {
+  margin-bottom: 50px; }
