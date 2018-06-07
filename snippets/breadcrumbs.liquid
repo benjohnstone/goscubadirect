@@ -14,12 +14,29 @@ support@tonytemplates.com
 					{% endif %}
 					<li><span>{{ product.title }}</span></li>
 				{% elsif template contains 'collection' and collection.handle %}
+				
+					{% if collection.handle contains 'scuba' %}
+					<li><span><a href="/pages/scuba">Scuba</a></span></li>
+					{% endif %}
+					
+					{% if collection.handle contains 'surf' %}
+					<li><span><a href="/pages/surf">Surf</a></span></li>
+					{% endif %}
+					
+					{% if collection.handle contains 'freedive' %}
+					<li><span><a href="/pages/freedive">Freedive</a></span></li>
+					{% endif %}
+					
+					{% if collection.handle contains 'rebreathers' %}
+					<li><span><a href="/pages/freedive">Rebreathers</a></span></li>
+					{% endif %}
+					
 					{% if current_tags %}
 						{% capture url %}/collections/{{ collection.handle }}{% endcapture %}
 						<li>{{ collection.title | link_to: url }}</li>
 						<li><span>{{ current_tags | join: " + " }}</span></li>
 					{% else %}
-						<li><span>{{ collection.title }}</span></li>
+						<li><span>{{ collection.title | remove_first: 'Scuba' | remove_first: 'Surf' | remove_first: 'Rebreathers' | remove_first: 'Freedive' }}</span></li>
 					{% endif %}
 				{% elsif template == 'blog' %}
 					{% if current_tags %}

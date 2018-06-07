@@ -74,7 +74,7 @@ support@tonytemplates.com
 	<div class="{{ loc-container-class }} {{ loc-appearance-class }}" data-section-id="{{ section.id }}" data-section-type="home-infobox" {{ res-styles_background_container }}>
 		<div class="{{ loc-row-class }}">
 			{%- for block in section.blocks limit: section.blocks.size -%}
-				<div class="col-lg-{{ colwidth }}" {{ block.shopify_attributes }} {{ res-styles_container }}>
+				<div class="col-md-{{ colwidth }}" {{ block.shopify_attributes }} {{ res-styles_container }}>
 					<a href="{{ block.settings.text-banner-url }}" class="{{ loc-a-class }}">
 						{%- if block.settings.text-banner-icon != blank -%}
 							<i class="{{ block.settings.text-banner-icon }}" {{ res-styles_icon }}></i>

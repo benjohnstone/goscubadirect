@@ -399,6 +399,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/custom-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/custom-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/custom.css": {
 		"aP": 1,
 		"bl": 0,
@@ -416,7 +426,7 @@
 		"oA": 0,
 		"oAP": "\/custom-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/custom.scss": {
@@ -460,7 +470,7 @@
 		"oA": 0,
 		"oAP": "\/giftcard-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/ico-select.svg.liquid": {
@@ -536,7 +546,7 @@
 		"oA": 0,
 		"oAP": "\/smooth-scroll-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/style.css.liquid": {
@@ -553,7 +563,7 @@
 		"oA": 0,
 		"oAP": "\/theme-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/theme.scss.liquid": {
@@ -570,7 +580,7 @@
 		"oA": 0,
 		"oAP": "\/vendor-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		}
 	},
@@ -2388,7 +2398,7 @@
 		"quality": 100
 		},
 	"languageDefaultsJS": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
@@ -2396,7 +2406,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
-		"syntaxCheckerStyle": 3,
+		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {

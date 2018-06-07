@@ -1,3 +1,4 @@
+
 {%- comment -%}
 (c) Tonytemplates Ltd,
 https://www.tonytemplates.com/
@@ -7,6 +8,13 @@ support@tonytemplates.com
     {%- include 'head' -%}
     {{ content_for_header }}
 {%- endcapture -%}
+
+
+
+{%- include 'section-detect' -%}
+
+
+
 {%- capture loc-content_for_header -%}{%- section 'header' -%}{%- endcapture -%}
 {%- capture loc-content_for_layout -%}{{ content_for_layout }}{%- endcapture -%}
 {%- include 'layout-res-settings' -%}

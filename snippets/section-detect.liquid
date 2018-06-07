@@ -1,0 +1,34 @@
+{% if template contains 'page' %}
+
+  {% assign handle = page.url %}
+  
+{% elsif template contains 'collection' %}
+
+  {% assign handle = collection.url %}
+
+{% elsif template contains 'product' %}
+  
+  {% assign handle = collection.url %}
+
+{% elsif template contains 'article' %}
+  
+  {% assign handle = article.url %}
+  
+  
+{% elsif template contains 'blog' %}
+  {% assign handle = blog.url %}
+{% endif %}
+
+{% if handle contains 'scuba' %}
+  {% assign brand_cat = 'scuba' %}
+ 
+{% elsif handle contains 'surf' %}
+  {% assign brand_cat = 'scuba' %}
+  
+{% elsif handle contains 'freedive' %}
+  {% assign brand_cat = 'freedive' %}
+  
+{% elsif handle contains 'rebreathers' %}
+  {% assign brand_cat = 'rebreathers' %}
+  {% else assign brand_cat = 'go-scuba-direct' %}  
+{% endif %}

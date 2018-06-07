@@ -54,7 +54,7 @@ If a comment was just submitted but requires moderation, we have an extra commen
 				{%- comment -%} ### Author ### {%- endcomment -%}
 				{%- if section.settings.show_author == true -%}
 					{% capture date %}{{ article.published_at | time_tag: format: 'month_day_year' }}{% endcapture %}
-					{{ 'blogs.article.author_on_date_html' | t: author: article.author, date: date }}
+					
 				{%- endif -%}
 			</div>
 			<div class="tt-post-text__footer">

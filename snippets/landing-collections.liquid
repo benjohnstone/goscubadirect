@@ -1,0 +1,75 @@
+<!-- {{ landing_category }} -->
+
+{% assign this-image = null %}
+	      {% assign res-styles_title = null %}
+	      {% assign res-styles_hover_title = null %}
+	      {% assign res-styles_hover_info = null %}
+	      {% assign res-styles_hover_quantity = null %}
+	      {% assign res-styles_hover_bg = null %}
+	
+	      {% unless collection.handle == 'frontpage' %}
+	        {% for block in section.blocks %}
+	          {% assign this-settings = block.settings %}
+	          {% if this-settings.for_collection == collection.handle %}
+	            {% if this-settings.color_title_c != blank and this-settings.color_title_c != 'rgba(0,0,0,0)' %}
+	              {% capture res-styles_title %} style="color: {{ this-settings.color_title_c }};"{% endcapture %}
+	            {% endif %}
+	            {% if this-settings.color_title_h_c != blank and this-settings.color_title_h_c != 'rgba(0,0,0,0)' %}
+	              {% capture res-styles_hover_title %} style="color: {{ this-settings.color_title_h_c }};"{% endcapture %}
+	            {% endif %}
+	            {% if this-settings.color_info_h_c != blank and this-settings.color_info_h_c != 'rgba(0,0,0,0)' %}
+	              {% capture res-styles_hover_info %} style="color: {{ this-settings.color_info_h_c }};"{% endcapture %}
+	            {% endif %}
+	            {% if this-settings.color_quantity_h_c != blank and this-settings.color_quantity_h_c != 'rgba(0,0,0,0)' %}
+	              {% capture res-styles_hover_quantity %} style="color: {{ this-settings.color_quantity_h_c }};"{% endcapture %}
+	            {% endif %}
+	            {% if this-settings.color_h_bg != blank and this-settings.color_h_bg != 'rgba(0,0,0,0)' %}
+	              {% capture res-styles_hover_bg %} style="background-color: {{ this-settings.color_h_bg }};"{% endcapture %}
+	            {% endif %}
+	
+	            {% assign this-image = this-settings.image %}
+	          {% endif %}
+	        {% endfor %}
+	
+	        {% assign this-image_animation = 'ttg-image-translate--top|ttg-image-translate--left|ttg-image-translate--bottom|ttg-image-translate--right|ttg-image-scale' | split:'|' %}
+	        {% assign res-image_animation_max = this-image_animation.size | minus: 1 %}
+	        {% if this-animation_index == blank or this-animation_index >= res-image_animation_max %}
+	          {% assign this-animation_index = 0 %}
+	        {% else %}
+	          {% assign this-animation_index = this-animation_index | plus: 1 %}
+	        {% endif %}
+	
+	        <div class="collection col-md-4 col-lg-4 col-xl-3">
+	          <a href="{{ collection.url }}"
+	             title="{{ 'collections.general.link_title' | t: title: title }}">
+	            <div class="moa-promobox__content">
+	              {% if this-image != blank %}
+	                {{ this-image | img_url: '600x600' | img_tag: collection.title }}
+	              {% elsif collection.image != blank %}
+	                {{ collection | img_url: '600x600' | img_tag: collection.title }}
+	              {% elsif collection.products.first != blank %}
+	                {{ collection.products.first | img_url: '600x600' | img_tag: collection.title }}
+	              {% else %}
+	                
+	                <img src="//cdn.shopify.com/s/files/1/0008/8486/7119/files/image-placeholder.jpg?6257279177301081145">
+	                
+	              {% endif %}
+	              <div class="moa-promobox__text"
+	                   data-resp-md="md"
+	                   data-resp-sm="md"
+	                   data-resp-xs="sm">
+	                <div{{ res-styles_title }}>{{ collection.title | remove_first: landing_category }}</div>
+	              </div>
+	              <div class="moa-promobox__hover
+	                        moa-promobox__hover--fade">
+	                <div class="moa-promobox__hover-bg"{{ res-styles_hover_bg }}></div>
+	                <div class="moa-promobox__text tt-promobox__point-lg--center">
+	                  <p class="moa-text-animation--emersion">
+	                    <span{{ res-styles_hover_info }}><span{{ res-styles_hover_quantity }}>{{ collection.products_count }}</span> {{ 'list_collections.product.count' | t }}</span>
+	                  </p>
+	                </div>
+	              </div>
+	            </div>
+	          </a>
+	        </div>
+	      {% endunless %}
